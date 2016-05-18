@@ -3,7 +3,7 @@
 
 angular.module('mean2App.constants', [])
 
-.constant('appConfig', {userRoles:['guest','user','admin']})
+.constant('appConfig', {userRoles:['guest','user','admin','cops']})
 
 ;
 })(angular);
