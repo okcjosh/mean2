@@ -48,7 +48,7 @@
       "mocha",
       "expect",
       "uirouter",
-      "es6"
+      "es5"
     ],
     "extensions": [
       "babel",
