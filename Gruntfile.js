@@ -114,7 +114,7 @@ module.exports = function(grunt) {
       },
       bower: {
         files: ['bower.json'],
-        tasks: ['wiredep']
+        tasks: ['']
       },
     },
 
@@ -540,36 +540,36 @@ module.exports = function(grunt) {
     },
 
     // Compiles ES6 to JavaScript using Babel
-    //babel: {
-     // options: {
-       // sourceMap: true
-      //},
-      //client: {
-        //files: [{
-          //expand: true,
-          //cwd: '<%= yeoman.client %>',
-          //src: ['{app,components}/**/!(*.spec).js'],
-          //dest: '.tmp'
-        //}]
-      //},
-      //server: {
-        //options: {
-       //   plugins: [
-         //   'transform-class-properties',
-          //  'transform-runtime'
-          //]
-        //},
-        //files: [{
-          //expand: true,
-          //cwd: '<%= yeoman.server %>',
-          //src: [
-          //  '**/*.js',
-            //'!config/local.env.sample.js'
-      //    ],
-        //  dest: '<%= yeoman.dist %>/<%= yeoman.server %>'
-     //   }]
-      //}
-    //},
+    babel: {
+      options: {
+        sourceMap: true
+      },
+      client: {
+        files: [{
+          expand: false,
+          cwd: '<%= yeoman.client %>',
+          src: ['{app,components}/**/!(*.spec).js'],
+          dest: '.tmp'
+        }]
+      },
+      server: {
+        options: {
+          plugins: [
+            'transform-class-properties',
+            'transform-runtime'
+          ]
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.server %>',
+          src: [
+            '**/*.js',
+            '!config/local.env.sample.js'
+          ],
+          dest: '<%= yeoman.dist %>/<%= yeoman.server %>'
+        }]
+      }
+    },
 
     // Compiles Sass to CSS
     sass: {
